@@ -12,7 +12,7 @@ namespace FluentApi.Graph
         // Инструкции есть на сайте https://www.graphviz.org/download/
         // Укажите путь до исполняемого файла dot в константе ниже:
 
-        private const string PathToGraphviz = @"c:\Program Files (x86)\Graphviz2.38\bin\dot.exe";
+        private const string PathToGraphviz = @"C:\Program Files\Graphviz\bin\dot.exe";
 
         static void Main(string[] args)
         {
@@ -43,7 +43,7 @@ namespace FluentApi.Graph
             p.WaitForExit();
             Console.WriteLine(p.StandardError.ReadToEnd());
             Console.WriteLine("Result is saved to comment.png");
-            //Process.Start("comment.png");
+            Process.Start("comment.png");
         }
     }
 }
